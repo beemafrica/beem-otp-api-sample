@@ -11,7 +11,7 @@ const secret_key = "<secret_key>";
 function pin_request() {
   axios
     .post(
-      "https://apiotp.beem.africa/v1/request",
+      "https://apiotp.bongolive.africa/v1/request",
       {
         appId: 1,
         msisdn: "255685601693",

@@ -13,7 +13,7 @@ const content_type = "application/json";
 function pin_verify() {
   axios
     .post(
-      "https://otp.beem.africa/api/v1/verify",
+      "https://otp.bongolive.africa/api/v1/verify",
       {
         pinId: "8fa81447-4a14-4c2f-925b-78be40047c63",
         pin: "241663",
