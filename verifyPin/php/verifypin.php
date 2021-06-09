@@ -1,14 +1,14 @@
 <?php
+
 $api_key='<api_key>';
 $secret_key = '<secret_key>';
 
-// The data to send to the API
 $postData = array(
-    'appId' => '1',
-    'msisdn' => '255701000000',
+    'pinId' => '7fa81447-4a14-4c2f-925b-78be40047c63',
+    'pin' => '231663',
 );
 
-$Url ='https://apiotp.beem.africa/v1/request';
+$Url ='https://apiotp.beem.africa/v1/verify';
 
 // Setup cURL
 $ch = curl_init($Url);
@@ -22,7 +22,6 @@ curl_setopt_array($ch, array(
     CURLOPT_HTTPHEADER => array(
         'Authorization:Basic ' . base64_encode("$api_key:$secret_key"),
         'Content-Type: application/json'
-
     ),
     CURLOPT_POSTFIELDS => json_encode($postData)
 ));
@@ -37,4 +36,3 @@ if($response === FALSE){
     die(curl_error($ch));
 }
 var_dump($response);
-?>

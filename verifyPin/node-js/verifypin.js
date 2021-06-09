@@ -1,15 +1,11 @@
 const axios = require("axios");
 const https = require("https");
-var btoa = require("btoa");
-
-const content_type = "application/json";
-
-//.... replace <api_key> and <secret_key> with the valid keys obtained from the platform, under profile>authentication information
+const btoa = require("btoa");
 
 const api_key = "<api_key>";
 const secret_key = "<secret_key>";
-
 const content_type = "application/json";
+
 function pin_verify() {
   axios
     .post(
