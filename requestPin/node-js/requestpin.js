@@ -1,20 +1,18 @@
 const axios = require("axios");
 const https = require("https");
-var btoa = require("btoa");
+const btoa = require("btoa");
 
 const content_type = "application/json";
-
-//.... replace <api_key> and <secret_key> with the valid keys obtained from the platform, under profile>authentication information
-
 const api_key = "<api_key>";
 const secret_key = "<secret_key>";
+
 function pin_request() {
   axios
     .post(
       "https://apiotp.beem.africa/v1/request",
       {
         appId: 1,
-        msisdn: "255685601693",
+        msisdn: "255701000000",
       },
       {
         headers: {
